@@ -136,9 +136,7 @@ nav ul li a {
     }
 }
 
-header nav ul li a:hover {
-    background-color:pink;
-}
+
 .sign-in {
     background-color: #ff6b6b;
     border: none;
@@ -215,69 +213,151 @@ header nav ul li a:hover {
     animation: fadeIn 2s ease-in-out;
 }
 
-/* Responsive: Ensure the image scales well on small screens */
-@media (max-width: 768px) {
-    .hero-image {
-        max-width: 100%; /* Allow more space for the image on smaller screens */
-    }
+/* Default styles for larger screens */
+.hero {
+    display: flex;
+    flex-direction: row; /* Content and image side by side */
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
 }
 
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero-content {
+    flex: 1; /* Allow content to take up available space */
+    padding-right: 20px; /* Space between content and image */
 }
 
-/* Responsive design */
-/* Responsive design */
+.hero-image {
+    flex: 1; /* Allow image to take up available space */
+    max-width: 50%; /* Limit image size */
+}
+
+.hero h1 {
+    font-size: 3em; /* Large heading size */
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.hero-buttons button {
+    padding: 10px 20px;
+    /* Default styles for larger screens */
+}
+.hero {
+    display: flex;
+    flex-direction: row; /* Content and image side by side */
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.hero-content {
+    flex: 1; /* Allow content to take up available space */
+    padding-right: 20px; /* Space between content and image */
+}
+
+.hero-image {
+    flex: 1; /* Allow image to take up available space */
+    max-width: 50%; /* Limit image size */
+}
+
+.hero h1 {
+    font-size: 3em; /* Large heading size */
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.hero-buttons button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+/* Default Hero Section for Larger Screens */
+.hero {
+    display: flex;
+    flex-direction: row; /* Content and image side by side */
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.hero-content {
+    flex: 1; /* Allow content to take up available space */
+    padding-right: 20px; /* Space between content and image */
+}
+
+.hero-image {
+    flex: 1; /* Allow image to take available space */
+    max-width: 50%; /* Limit image size */
+}
+
+.hero h1 {
+    font-size: 3em; /* Large heading size */
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.hero-buttons button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+/* Responsive Design for Small Screens */
 @media (max-width: 768px) {
     .hero {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        flex-direction: row; /* Keep content and image side by side */
+        flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+        padding: 20px; /* Less padding on small screens */
     }
 
     .hero-content {
-        width: 100%; /* Make content take full width */
-        margin-bottom: 20px; /* Add space between content and image */
+        flex: 1; /* Content takes available space */
+        max-width: 60%; /* Restrict content width for a balanced look */
+        padding-right: 10px; /* Less padding between content and image */
+        text-align: left; /* Keep text aligned to the left */
     }
 
+    /* Default Hero Section for Larger Screens */
+.hero-image {
+    flex: 1;
+    max-width: 60%; /* Increase max-width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%; /* Ensure the image takes the full width of the container */
+    height: auto;
+    max-height: 600px; /* Increase max height */
+    object-fit: cover;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
     .hero-image {
-        width: 100%; /* Ensure image takes full width */
-        max-width: 500px; /* Limit image width to prevent it from being too large */
-        height: auto; /* Maintain aspect ratio */
-        margin: 0 auto; /* Center the image */
+        max-width: 50%; /* Increase image width */
     }
 
-    .hero-buttons {
-        display: flex;
-        justify-content: center;
+    .hero-image img {
         width: 100%;
-    }
-
-    .hero-buttons button {
-        margin: 5px; /* Add space between buttons */
+        max-height: 500px; /* Adjust for smaller screens */
     }
 }
 
-
-@keyframes text{
-    0%{
- color: crimson;
- margin-bottom: -40px;
-    }
-
-
-
 }
+
 
 /*MHSBB*/
 .card-slider {
@@ -683,6 +763,136 @@ p:hover{
     cursor: pointer;
     border-radius: 5px;
 }
+
+/* Articles Section */
+.articles {
+    padding: 40px 20px; /* Adjusted padding for smaller screens */
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.articles h2 {
+    color: blue;
+    font-size: 22px; /* Slightly smaller for small screens */
+    margin-bottom: 8px;
+}
+
+.articles h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.articles p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* Cards Container */
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    justify-content: center; /* Center cards in smaller screens */
+    gap: 20px; /* Adds spacing between cards */
+}
+
+/* Individual Card */
+.cardss {
+    background-color: #fff;
+    padding: 18px;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 350px; /* Keeps consistent size on all screens */
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.cardss:hover {
+    transform: translateY(-5px);
+}
+
+.cardss img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* Card Content */
+.cardss h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.cardss .category,
+.cardss .time {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.cardss .time {
+    text-align: right;
+}
+
+.cardss p {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.cardss .read-more {
+    text-decoration: none;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+/* View All Button */
+.view-all {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.view-all:hover {
+    background-color: #e54e4e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .articles {
+        padding: 30px 15px;
+    }
+
+    .articles h2 {
+        font-size: 20px;
+    }
+
+    .articles h3 {
+        font-size: 24px;
+    }
+
+    .articles p {
+        font-size: 14px;
+    }
+
+    .cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center them */
+    }
+
+    .cardss {
+        width: 90%; /* Take most of the width but leave some margin */
+        max-width: 400px; /* Keep max-width for consistency */
+    }
+}
+
 
 /* FQA SECTION */
 /* FAQ Section */
@@ -1159,103 +1369,7 @@ hr {
     .footer-links a {
         font-size: 12px;
     }
-    .articles h2 {
-        font-size: 28px;
-    }
-
-    .articles h3 {
-        font-size: 20px;
-    }
-
-    .articles p {
-        font-size: 14px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
-        gap: 20px;
-    }
-
-    .cardss {
-        padding: 15px;
-    }
-
-    .cardss h4 {
-        font-size: 18px;
-    }
-
-    .cardss p {
-        font-size: 13px;
-    }
-
-    .read-more {
-        font-size: 12px;
-    }
-    .secure-online h1 {
-        font-size: 28px;
-    }
-
-    .secure-online p {
-        font-size: 14px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
-        gap: 20px;
-    }
-
-    .cardi {
-        padding: 15px;
-    }
-
-    .cardi h3 {
-        font-size: 18px;
-    }
-
-    .cardi p {
-        font-size: 14px;
-    }
-
-    .author img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .view-all {
-        font-size: 14px;
-        padding: 8px 18px;
-    }
-    /* Hero Section */
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .hero-content h1 {
-        font-size: 30px;
-    }
-
-    .hero-content p {
-        font-size: 18px;
-    }
-
-    .hero-buttons button {
-        padding: 12px 25px;
-        font-size: 14px;
-        margin: 5px;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
+    
 
     /* Card Slider Section */
     .card-slider h2 {
@@ -1356,3 +1470,4 @@ hr {
 }
 
 }
+
